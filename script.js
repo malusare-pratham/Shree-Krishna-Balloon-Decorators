@@ -27,7 +27,16 @@ const SERVICES=[
 ["🏨","Hotel & Room Decoration","A thoughtful room reveal for birthdays, honeymoons and surprises.",["Birthday rooms","anniversary surprises","honeymoon","romantic setups"]],
 ["✨","Custom Event Decoration","Bring your colours, mood and ideas. We'll shape the celebration around them.",["Custom themes","photo booths","entrances","backdrops","colour palettes"]]
 ];
-const SIMG=["birthday","baby-shower","haldi","engagement","anniversary","shop-opening","room","custom"];
+const SIMG=[
+  "images/birthday decoration.webp",
+  "images/baby-shower.jpg",
+  "images/haldi.jpg",
+  "images/engagement.jpg",
+  "images/anniversary.jpg",
+  "images/shop-opening.jpg",
+  "images/room.jpg",
+  "images/custom.jpg"
+];
 const SCOL=[["#f58cae","#d9457a"],["#9ed8f0","#6aa8e0"],["#ffd36e","#f09a3a"],["#f7b6d0","#b8559a"],["#ff9db5","#c2306b"],["#c9a0ee","#7b3f98"],["#f6c9a0","#c9733a"],["#8fe0c8","#3aa88c"]];
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const wa=t=>`https://wa.me/${CONFIG.phone}?text=${encodeURIComponent(t)}`;
@@ -42,7 +51,7 @@ $$("#nav a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("op
 
 // Services
 $("#serviceGrid").innerHTML=SERVICES.map(([ic,t,d,l],i)=>`
-<article class="scard"><div class="simg" style="--c1:${SCOL[i][0]};--c2:${SCOL[i][1]}"><img src="images/svc-${SIMG[i]}.jpg" alt="${esc(t)} in Panchgani and Mahabaleshwar" width="640" height="400" loading="lazy" onerror="this.remove()"><span class="fe">${ic}</span><small>Photo coming soon</small></div><div class="sb"><div class="top"><span class="n">0${i+1}</span><span class="ic">${ic}</span></div>
+<article class="scard"><div class="simg" style="--c1:${SCOL[i][0]};--c2:${SCOL[i][1]}"><img src="${SIMG[i]}" alt="${esc(t)} in Panchgani and Mahabaleshwar" width="640" height="400" loading="lazy" onerror="this.remove()"><span class="fe">${ic}</span><small>Photo coming soon</small></div><div class="sb"><div class="top"><span class="n">0${i+1}</span><span class="ic">${ic}</span></div>
 <h3>${esc(t)}</h3><p>${esc(d)}</p><p class="inc">${l.map(esc).join(", ")}</p>
 <a class="btn pill wa" href="${wa(`Hello, I want a quote for ${t}. My event is in Panchgani/Mahabaleshwar.`)}" target="_blank" rel="noopener">💬 Get Quote →</a></div></article>`).join("");
 
