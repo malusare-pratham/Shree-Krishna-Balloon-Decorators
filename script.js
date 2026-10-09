@@ -7,7 +7,7 @@ const CONFIG = {
 const REVIEWS = [];           // e.g. [{name:"Customer name", text:"Real review text"}]
 // Gallery photos: put files in /images and change src. "Replace with real photo" shows if a file is missing.
 const GALLERY = [
-  {cat:"Birthday",sub:"Birthday celebration setup",src:"images/birthday decoration.jpg",alt:"Birthday balloon decoration in Panchgani"},
+  {cat:"Birthday",sub:"Birthday celebration setup",src:"images/birthday decoration.webp",alt:"Birthday balloon decoration in Panchgani"},
   {cat:"Baby Shower",sub:"Baby shower balloon arrangement",src:"images/baby-shower.jpg",alt:"Baby shower balloon decoration"},
   {cat:"Engagement",sub:"Engagement celebration backdrop",src:"images/engagement1.jpg",alt:"Engagement balloon decoration"},
   {cat:"Haldi",sub:"Bright haldi event balloons",src:"images/haldi.jpg",alt:"Haldi balloon decoration in Mahabaleshwar"},
