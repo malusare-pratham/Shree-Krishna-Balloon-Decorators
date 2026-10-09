@@ -183,3 +183,15 @@ dialog::backdrop{background:rgba(30,10,40,.75);backdrop-filter:blur(3px)}
 }
 @media(min-width:1000px){.grid4{grid-template-columns:repeat(4,1fr)}.steps{grid-template-columns:repeat(4,1fr)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hcopy>*,.arch{opacity:1}.js .reveal{opacity:1;transform:none}}
+
+/* service card photos */
+.scard{padding:0;gap:0;overflow:hidden}
+.sb{padding:18px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.simg{position:relative;aspect-ratio:16/10;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.simg::before,.simg::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.2)}
+.simg::before{width:130px;height:130px;left:-36px;bottom:-54px}.simg::after{width:80px;height:80px;right:-16px;top:-22px}
+.simg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .7s}
+.scard:hover .simg img{transform:scale(1.09)}
+.fe{font-size:3.2rem;filter:drop-shadow(0 6px 10px rgba(0,0,0,.25));transition:transform .4s}.scard:hover .fe{transform:scale(1.15) rotate(-6deg)}
+.simg small{position:absolute;left:10px;top:10px;z-index:2;font-size:.65rem;background:rgba(255,255,255,.88);color:var(--dark);padding:3px 10px;border-radius:99px}
+.simg img~.fe,.simg img~small{display:none}
